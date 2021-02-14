@@ -1,0 +1,32 @@
+1) Difference between HTTP1.1 vs HTTP2 HTTP version history
+
+HTTP1.1 uses plain text format for all requests and responses, but HTTP2 uses binary format instead of plain texts format.
+
+2) List 5 differences between Browser JS vs Node Js.
+
+    a) Browser JS mainly used for client side validation but Node JS used for backend purposes like doing CURD operations in DB, or creating/editing files, ets..
+    b) Browser JS limited to access file system but Node js does the file operations
+    c) Browser JS can access window object, location object and more, but the Node Js can't
+    d) Browser Js runs on any engines like spider monkey, v8 but Node JS runes only in v8 engine
+    e) Node JS s headless but Browser JS is not headless.
+
+3) what happens when you type a URL in the address bar in the browser?
+
+As soon as entering the site url in browser, it looks for the IP Address of the host in DNS record and then it fetch the webpage available in that IP Address.
+
+4) Write a write up on Difference between copy by value and copy by reference.
+
+copy by value point to the value of the variable but copy by reference points to the address of the variable.
+
+5) How to copy by value a composite data type (array+objects).
+by using spread operator(...)
+
+Example:
+
+let a = [1,2,3,5];
+let b = [...a];
+let c = a;
+a[0] = 100;
+console.log(a);
+console.log(b);
+console.log(c);
