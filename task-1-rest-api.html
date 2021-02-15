@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Total countries population</title>
+</head>
+<script>
+    document.write("Fetching from API......Please wait.....");
+    fetch("https://restcountries.eu/rest/v2/all ").then(result => result.json()).then(result => {
+        let totalPopulation = 0;
+        if (result.length > 0) {
+            for (let country of result) {
+                totalPopulation += country.population;
+            }
+        }
+        let population = `Total population is: ${totalPopulation}`;
+        console.log(population);
+        document.write(population);
+    });
+</script>
+</html>
