@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Total countries population</title>
+</head>
+<body>
+<div id="status"></div>
+<ol id="countries-list"></ol>
+<script>
+    document.getElementById('status').innerText = "Fetching from API......Please wait.....";
+    fetch("https://restcountries.eu/rest/v2/all ").then(result => result.json()).then(result => {
+        if (result.length > 0) {
+            document.getElementById('status').innerText = `There are ${result.length} countries found.Below are the list of countries`;
+            for (let country of result) {
+                console.log(country.name);
+                let li = document.createElement('li');
+                li.innerHTML = country.name;
+                document.getElementById("countries-list").appendChild(li);
+            }
+        }
+    });
+</script>
+</body>
+</html>
